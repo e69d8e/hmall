@@ -31,9 +31,7 @@ build/
 
 ### VS Code ###
 .vscode/
-
-src/main/resources/application-dev.yml
-
 # 忽略一些敏感文件
-application-dev.yml
+!**/application-dev.yaml
+!**/application-local.yaml
 

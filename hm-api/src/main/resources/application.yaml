@@ -1,0 +1,5 @@
+# 开启连接池功能
+feign:
+  okhttp:
+    enabled: true
+# openfeign日志
