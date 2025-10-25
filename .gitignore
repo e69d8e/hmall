@@ -35,3 +35,6 @@ build/
 !**/application-dev.yaml
 !**/application-local.yaml
 
+## 日志文件
+logs/
+

@@ -8,11 +8,11 @@ import org.springframework.context.annotation.Bean;
 
 // 不加@Configuration注解
 public class DefaultFeignConfig {
-    @Bean
+    @Bean // feign日志级别
     public Logger.Level feignLoggerLevel(){
-        return Logger.Level.FULL; // 全部日志
+        return Logger.Level.BASIC;
     }
-    @Bean
+    @Bean // 微服务之间的用户信息传递
     public RequestInterceptor requestInterceptor(){
         return new RequestInterceptor() {
             @Override

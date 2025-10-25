@@ -1,4 +1,13 @@
 hm:
   db:
-    host: mysql
-    pw: 123
+    host: 127.0.0.1
+    un: root
+    pw: 123456
+    port: 3306
+    database: hm-item
+  swagger:
+    title: 黑马商城商品接口文档
+    description: 黑马商城商品接口文档
+    email: e69d8e1026@gmail.com
+    concat: li
+    package: com.hmall.item.controller

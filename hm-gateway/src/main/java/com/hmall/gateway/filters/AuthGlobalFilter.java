@@ -14,7 +14,7 @@ import org.springframework.web.server.ServerWebExchange;
 import reactor.core.publisher.Mono;
 
 @Component
-@RequiredArgsConstructor
+@RequiredArgsConstructor // 自动注入jwtTool和authProperties
 public class AuthGlobalFilter implements GlobalFilter, Ordered {
     private final JwtTool jwtTool;
     private final AuthProperties authProperties;

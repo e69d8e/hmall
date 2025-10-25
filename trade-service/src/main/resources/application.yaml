@@ -1,45 +1,66 @@
 server:
   port: 8085
-spring:
-  application:
-    name: trade-service
-  profiles:
-    active: dev
-  datasource:
-    url: jdbc:mysql://${hm.db.host}:3306/hm-trade?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&serverTimezone=Asia/Shanghai
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    username: root
-    password: ${hm.db.pw}
-  # 配置服务注册中心地址
-  cloud:
-    nacos:
-      server-addr: 192.168.6.100:8848
-mybatis-plus:
-  configuration:
-    default-enum-type-handler: com.baomidou.mybatisplus.core.handlers.MybatisEnumTypeHandler
-  global-config:
-    db-config:
-      update-strategy: not_null
-      id-type: auto
-logging:
-  level:
-    com.hmall: debug
-  pattern:
-    dateformat: HH:mm:ss:SSS
-  file:
-    path: "logs/${spring.application.name}"
-knife4j:
-  enable: true
-  openapi:
-    title: 黑马商城接口文档
-    description: "黑马商城用户管理接口文档"
-    email: zhanghuyi@itcast.cn
-    concat: 虎哥
-    url: https://www.itcast.cn
-    version: v1.0.0
-    group:
-      default:
-        group-name: default
-        api-rule: package
-        api-rule-resources:
-          - com.hmall.trade.controller
+#spring:
+#  application:
+#    name: trade-service
+#  profiles:
+#    active: dev
+#  datasource:
+#    url: jdbc:mysql://${hm.db.host}:3306/hm-trade?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&serverTimezone=Asia/Shanghai
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#    username: root
+#    password: ${hm.db.pw}
+#  # 配置服务注册中心地址
+#  cloud:
+#    nacos:
+#      server-addr: 192.168.6.100:8848
+#mybatis-plus:
+#  configuration:
+#    default-enum-type-handler: com.baomidou.mybatisplus.core.handlers.MybatisEnumTypeHandler
+#  global-config:
+#    db-config:
+#      update-strategy: not_null
+#      id-type: auto
+#logging:
+#  level:
+#    com.hmall: debug
+#  pattern:
+#    dateformat: HH:mm:ss:SSS
+#  file:
+#    path: "logs/${spring.application.name}"
+#knife4j:
+#  enable: true
+#  openapi:
+#    title: 黑马商城接口文档
+#    description: "黑马商城用户管理接口文档"
+#    email: zhanghuyi@itcast.cn
+#    concat: 虎哥
+#    url: https://www.itcast.cn
+#    version: v1.0.0
+#    group:
+#      default:
+#        group-name: default
+#        api-rule: package
+#        api-rule-resources:
+#          - com.hmall.trade.controller
+#hm:
+#  datasource:
+#    port: 3306
+#    database: hm-trade
+#    username: root
+#  swagger:
+#    name: 交易
+#    path: trade
+hm:
+  db:
+    host: 127.0.0.1
+    un: root
+    pw: 123456
+    port: 3306
+    database: hm-trade
+  swagger:
+    title: 黑马商城交易接口文档
+    description: 黑马商城交易接口文档
+    email: e69d8e1026@gmail.com
+    concat: li
+    package: com.hmall.trade.controller

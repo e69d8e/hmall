@@ -1,5 +1,15 @@
 server:
   port: 8082
+
+spring:
+  cloud:
+    sentinel:
+      transport:
+        dashboard: localhost:8090 # sentinel控制台地址
+feign:
+  sentinel:
+    enabled: true
+
 #spring:
 #  application:
 #    name: cart-service
@@ -44,13 +54,26 @@ server:
 #        api-rule-resources:
 #          - com.hmall.cart.controller
 
+#hm:
+#  datasource:
+#    port: 3306
+#    database: hm-cart
+#    username: root
+#  swagger:
+#    name: 购物车
+#    path: cart
 
 hm:
-  datasource:
+  db:
+    host: 127.0.0.1
+    un: root
+    pw: 123456
     port: 3306
     database: hm-cart
-    username: root
   swagger:
-    name: 购物车
-    path: cart
+    title: 黑马商城购物车接口文档
+    description: 黑马商城个购物车接口文档
+    email: e69d8e1026@gmail.com
+    concat: li
+    package: com.hmall.cart.controller
 
